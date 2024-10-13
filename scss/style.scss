@@ -1,0 +1,33 @@
+@import "_vars";
+@import "_mixin";
+@import "_reset";
+  *{
+    padding: 0;
+    margin: 0;
+  }
+  .header{
+    padding: 5px;
+    @include Flex(row,center,flex-start,200px);
+    background-color: $main-color;
+    &-burgers{
+      padding: 15px 50px;
+      @include Flex(row,center,center,10px);
+      border-right: 1px solid #2F4357;
+      border-left: 1px solid #2F4357;
+      &__text{
+        @include Poppins(14px,600,21px);
+        color: $background-color;
+      }
+    }
+    .nav{
+      margin-left: -70px;
+      &-list{
+        @include Flex(row,center,center,50px);
+        &-item{
+          &__link{
+            color: $second-color;
+          }
+        }
+      }
+    }
+  }
